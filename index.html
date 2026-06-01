@@ -623,7 +623,7 @@ async function load() {
     // Fallback para localStorage se ainda não configurou
     try { data = JSON.parse(localStorage.getItem('ideaflow_v1')) || []; } catch(e) { data = []; }
     setSyncStatus('offline');
-    if (data.length === 0) addSampleData();
+    // dados de exemplo desativados
     finishLoad();
     showConfigWarning();
     return;
