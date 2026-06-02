@@ -580,7 +580,7 @@ select option { background: var(--surface2); }
 // ===================== DATA =====================
 // ===================== CONFIGURAÇÃO GOOGLE SHEETS =====================
 // Cole aqui a URL do seu Google Apps Script após seguir o GUIA_CONFIGURACAO.md
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxwvcpPSDqjD78E601QSVYTHOM3czSKRumKGBSl81dF8YZMsiods7jUSWdLmcHCrJIA/exec';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzg1lMPrjEjZKO1oHWUGpcsOo2e7yfbNp1dZXhXc_RPULK9W8ers2jfgJTwVovCRLmE/exec';
 
 let data = [];
 let editingId = null;
@@ -614,7 +614,7 @@ function setSyncStatus(status) {
 
 // ---- Verificar se URL foi configurada ----
 function isConfigured() {
-  return APPS_SCRIPT_URL && APPS_SCRIPT_URL !== 'https://script.google.com/macros/s/AKfycbxwvcpPSDqjD78E601QSVYTHOM3czSKRumKGBSl81dF8YZMsiods7jUSWdLmcHCrJIA/exec' && APPS_SCRIPT_URL.startsWith('https://');
+  return APPS_SCRIPT_URL && APPS_SCRIPT_URL !== 'https://script.google.com/macros/s/AKfycbzg1lMPrjEjZKO1oHWUGpcsOo2e7yfbNp1dZXhXc_RPULK9W8ers2jfgJTwVovCRLmE/exec' && APPS_SCRIPT_URL.startsWith('https://');
 }
 
 // ---- LOAD: busca dados do Google Sheets ----
