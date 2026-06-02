@@ -630,7 +630,7 @@ async function load() {
   }
   setSyncStatus('loading');
   try {
-    const res = await fetch(APPS_SCRIPT_URL + '?action=getAll'+ CHAVE_API, { method: 'GET' });
+    const res = await fetch(APPS_SCRIPT_URL + '?action=getAll'+ API_KEY, { method: 'GET' });
     const json = await res.json();
     if (json.ok) {
       data = json.data || [];
