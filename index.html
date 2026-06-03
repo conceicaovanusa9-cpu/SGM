@@ -580,8 +580,7 @@ select option { background: var(--surface2); }
 // ===================== DATA =====================
 // ===================== CONFIGURAÇÃO GOOGLE SHEETS =====================
 // Cole aqui a URL do seu Google Apps Script após seguir o GUIA_CONFIGURACAO.md
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/library/d/1SrCoR0ULQ1REMbWeWv7pR6eDg8N0G7f4hMH-uODB3vluL0UU-IFuB4XV/7';
-const API_KEY = 'qualidade2026#@';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyb1ekThN137v8Yz99s6HrpCEoqS9V38YRVjxLzAW86C5oPFBE2SMRj9x3Ije8_hAUq/exec';
 let data = [];
 let editingId = null;
 let currentPage = 1;
@@ -630,7 +629,7 @@ async function load() {
   }
   setSyncStatus('loading');
   try {
-    const res = await fetch(APPS_SCRIPT_URL + '?action=getAll'+ API_KEY, { method: 'GET' });
+    const res = await fetch(APPS_SCRIPT_URL + '?action=getAll', { method: 'GET' });
     const json = await res.json();
     if (json.ok) {
       data = json.data || [];
@@ -666,7 +665,7 @@ async function save(record, action) {
   try {
     const res = await fetch(APPS_SCRIPT_URL, {
       method: 'POST',
-      body: JSON.stringify({ action, record, key: API_KEY })
+      body: JSON.stringify({ action, record })
     });
     const json = await res.json();
     if (json.ok) {
